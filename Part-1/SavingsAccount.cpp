@@ -1,11 +1,12 @@
 #include "SavingsAccount.h"
-
+#include <string>
 using namespace std;
 
 // constructor initializes balance and interest rate
 SavingsAccount::SavingsAccount( double initialBalance, double rate ) : Account( initialBalance ) 
 {
-	// your code
+	balance = initialBalance;
+	interestRate = rate;
 }
 
 double SavingsAccount::calculateInterest() {
@@ -13,5 +14,8 @@ double SavingsAccount::calculateInterest() {
 } 
 void SavingsAccount::display(ostream & os) const
 {
-	// your code
+	os << "Account Type: Savings" << endl;
+	os << "Balance: $" + to_string(balance) << endl;
+	os << "Interest Rate: " to_string(interestRate) + "%" << endl;
+	//cout << os;
 }

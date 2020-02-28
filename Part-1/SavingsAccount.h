@@ -7,6 +7,7 @@ using namespace std;
 
 class SavingsAccount : public Account{
 	private:
+		double balance;
 		double interestRate; // interest rate 
 	public:
 	
